@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: rgb(0, 0, 0);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+nav {
+  height: 100px;
+  padding: 0 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+nav h2 {
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4vw;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: -1vw;
+  font-weight: 550;
+  transition: all .2s ease-in-out;
+}
+
+a:hover {
+  color: orangered;
+  transform: scale(1.2);
+}
+
+.nav i {
+  font-size: 1.2vw;
+  display: none;
+}
+
+.check {
+  display: none;
+}
+
+
+/*Content*/
+.content {
+  height: calc(100% - 100px);
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.left {
+  height: 100%;
+  width: 50%;
+  padding: 1vw 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid black;
+}
+
+.left h2 {
+  font-size: 8vw;
+  margin-bottom: 1vw;
+  text-transform: uppercase;
+}
+
+.left span {
+  color: orangered;
+}
+
+.left p {
+  width: 80%;
+  font-size: 1vw;
+  color: gray;
+  margin-bottom: 2vw;
+}
+
+button {
+  width: 30%;
+  font-size: 1vw;
+  padding: 1vw 2vw;
+  color: white;
+  border-radius: 50px;
+  background-color:orangered;
+  border: none;
+  transition: all .2s ease-in-out;
+}
+
+button:hover {
+  border: 2px solid orangered;
+  background: none;
+  border-radius: 5px;
+  color: orangered;
+}
+
+.right {
+  height: 100%;
+  width: 50%;
+}
+
+/* .right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}*/ 
+
+.right video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width:600px) {
+  .nav {
+    padding: 0 5vw;
+    height: 10%;
+  }
+
+  .nav h2 {
+    font-size: 4vw;
+  }
+
+  .nav a {
+    display: none;
+  }
+
+  .nav i {
+    display: block;
+    font-size: 4vw;
+  }
+
+  .content {
+    height: calc(100% - 60px);
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    height: 40%;
+    padding: 4vw 6vw;
+    border-bottom: 1px solid black;
+  }
+
+  .left h2 {
+    font-size: 10vw;
+    line-height: 11vw;
+  }
+
+  .left p {
+    font-size: 3vw;
+    width: 80%;
+    margin-top: 3vw;
+  }
+
+  .right {
+    width: 100%;
+    height: 60%;
+  }
+
+  button {
+    width: 20%;
+  }
+}
